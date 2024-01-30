@@ -1,0 +1,41 @@
+{% include "core/master.html" %}
+
+<div class="main-wrapper">
+         
+    {% include "core/header.html" %}
+
+    <div class="sidebar" id="sidebar">
+       <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+             <ul>
+                <li>
+                   <a href="index.html"><i class="fas fa-clipboard-list"></i> <span>Dashboard</span></a>
+                </li>
+
+                {% block sidebarmenu %}
+              
+                {% endblock sidebarmenu %}
+               </ul>
+          </div>
+       </div>
+    </div>
+
+    <div class="page-wrapper">
+       <div class="content container-fluid">
+          <div class="page-header">
+             <div class="row">
+                <div class="col-sm-12">
+                   <h3 class="page-title">{% block current_page_title %}{% endblock current_page_title %}</h3>
+                   <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">{% block current_page %}{% endblock current_page %}</a></li>
+                      <li class="breadcrumb-item active">{% block current_page_title2 %}{% endblock current_page_title2 %}</li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+          <div class="row">
+                {% block body_content %}{% endblock body_content %}
+          </div>
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,41 @@
+{% include "../core/master.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+      <title>Preskool - Login</title>
+   </head>
+   <body>
+      <div class="main-wrapper login-body">
+         <div class="login-wrapper">
+            <div class="container">
+               <div class="loginbox">
+                  <div class="login-left">
+                     <img class="img-fluid" src="{% static "core/assets/img/logo-white.png" %}" alt="Logo">
+                  </div>
+                  <div class="login-right">
+                     <div class="login-right-wrap">
+                        <h1>Login</h1>
+                        <p class="account-subtitle">Access to our dashboard</p>
+                        <form action="https://preschool.dreamguystech.com/html-template/index.html">
+                           <div class="form-group">
+                              <input class="form-control" type="text" placeholder="Email">
+                           </div>
+                           <div class="form-group">
+                              <input class="form-control" type="text" placeholder="Password">
+                           </div>
+                           <div class="form-group">
+                              <button class="btn btn-primary btn-block" type="submit">Login</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
