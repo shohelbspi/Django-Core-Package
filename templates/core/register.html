@@ -1,0 +1,58 @@
+{% include "../core/master.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+      <title>Register</title>
+   </head>
+   <body>
+    <div class="main-wrapper login-body">
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="loginbox">
+                    <div class="login-left">
+                        <img class="img-fluid" src="{% static "core/assets/img/logo-white.png" %}" alt="Logo">
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Register</h1>
+                            <p class="account-subtitle">Access to our dashboard</p>
+    
+                            <form action="" method='post'> {% csrf_token %}
+                                <div class="form-group">
+                                    {{form.username}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.password1}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.password2}}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.groups }}
+                                </div>
+                                <div class="form-group mb-0">
+                                    <button class="btn btn-primary btn-block" type="submit">Register</button>
+                                </div>
+                            </form>
+
+    
+                            <div class="text-center dont-have">Already have an account? <a href="{% url "login" %}">Login</a></div>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                <span style="color: red;">{{ message }}</span>
+
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </body>
+</html>
